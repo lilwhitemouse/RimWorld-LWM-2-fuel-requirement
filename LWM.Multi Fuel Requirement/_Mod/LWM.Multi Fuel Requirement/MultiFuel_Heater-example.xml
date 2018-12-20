@@ -1,0 +1,129 @@
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Heater_Chemfuel</defName>
+    <label>Heater that Requires Multiple Fuels</label>
+    <thingClass>Building</thingClass>
+    <description>A device that requires wood, food, and chemfuel to produce heat.  Proof of concept.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Heater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.5,0.3,0.7)</volume>
+        <offset>(0,0,-0.15)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.234375,0,0.515625,0.984375)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <!-- <uiIconPath>Things/Building/Misc/Tempcontrol/Heater</uiIconPath> -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <blockWind>true</blockWind>
+    <rotatable>false</rotatable>
+    <!-- <fillPercent>0.4</fillPercent> -->
+    <thingCategories>
+      <li>BuildingsTemperature</li>
+    </thingCategories>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <statBases>
+      <WorkToBuild>1000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>6</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <selectable>true</selectable>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+      <li Class="LWM.Multi_Fuel_Requirement.Properties">
+	<fuelConsumptionRate>25</fuelConsumptionRate>
+        <fuelCapacity>12.0</fuelCapacity>
+        <fuelFilter>
+	  <categories>
+	    <li>FoodRaw</li>
+	  </categories>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+      </li>
+      <li Class="LWM.Multi_Fuel_Requirement.Properties">
+        <fuelConsumptionRate>25</fuelConsumptionRate>
+        <fuelCapacity>10.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+	    <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+      </li>	    
+      <li Class="LWM.Multi_Fuel_Requirement.Properties">
+	<fuelLabel>Labeled Wood Fuel</fuelLabel>
+        <fuelConsumptionRate>25</fuelConsumptionRate>
+        <fuelCapacity>15.0</fuelCapacity>
+        <fuelFilter>
+              <thingDefs>
+		<li>WoodLog</li>
+              </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <!-- <li Class="CompProperties_Flickable"> -->
+        <!-- <commandTexture>UI/Commands/Vent</commandTexture> -->
+        <!-- <commandLabelKey>CommandDesignateOpenCloseVentLabel</commandLabelKey> -->
+        <!-- <commandDescKey>CommandDesignateOpenCloseVentDesc</commandDescKey> -->
+      <!-- </li> -->
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>32</heatPerSecond>
+        <heatPushMaxTemperature>28</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.2</fireSize>
+        <!-- <offset>(0,0,0.2)</offset> -->
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>0</explosiveRadius>
+        <explosiveExpandPerFuel>0.35</explosiveExpandPerFuel>
+        <explosiveDamageType>Flame</explosiveDamageType>
+        <startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+        <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+        <preExplosionSpawnChance>1</preExplosionSpawnChance>
+        <wickTicks>
+          <min>30</min>
+          <max>30</max>
+        </wickTicks>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <designationCategory>Temperature</designationCategory>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+  </ThingDef>
+
+
+  
+</Defs>

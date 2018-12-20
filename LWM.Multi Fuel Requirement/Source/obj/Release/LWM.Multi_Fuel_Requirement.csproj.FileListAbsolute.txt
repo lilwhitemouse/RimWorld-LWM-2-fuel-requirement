@@ -1,0 +1,5 @@
+/home/peter/play/rimworld/LWM.Multi Fuel Requirement/_Mod/LWM.Multi Fuel Requirement/Assemblies/LWM.Multi_Fuel_Requirement.dll
+/home/peter/play/rimworld/LWM.Multi Fuel Requirement/Source/obj/Release/LWM.Multi_Fuel_Requirement.csprojAssemblyReference.cache
+/home/peter/play/rimworld/LWM.Multi Fuel Requirement/Source/obj/Release/LWM.Multi_Fuel_Requirement.csproj.CoreCompileInputs.cache
+/home/peter/play/rimworld/LWM.Multi Fuel Requirement/Source/obj/Release/LWM.Multi_Fuel_Requirement.csproj.CopyComplete
+/home/peter/play/rimworld/LWM.Multi Fuel Requirement/Source/obj/Release/LWM.Multi_Fuel_Requirement.dll
