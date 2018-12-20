@@ -24,4 +24,6 @@ Don't mix them.
 
 Code available at: https://github.com/lilwhitemouse/RimWorld-LWM-Multi-Fuel-Requirement
 
+Steam mod is at: https://steamcommunity.com/id/littlewhitemouse/myworkshopfiles/?appid=294100
+
 Any problems, let me know in the forum, on GitHub, or if you get no response, at lilmouse(at)littlewhitemouse.net.
